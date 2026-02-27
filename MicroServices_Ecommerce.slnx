@@ -1,0 +1,34 @@
+<Solution>
+  <Folder Name="/Infrastructure/">
+    <Project Path="Infrastructure/Common.Logging/Common.Logging.csproj" Id="6167ba26-67f3-4d04-baff-065801d7bee7" />
+    <Project Path="Infrastructure/EventBus.Messages/EventBus.Messages.csproj" Id="b3d22da0-4d29-48de-86cd-f7586446a70a" />
+  </Folder>
+  <Folder Name="/services/" />
+  <Folder Name="/services/Basket/">
+    <Project Path="services/Basket/Basket.Api/Basket.Api.csproj" Id="bd88af1a-d338-4003-8fc4-f238646dcb23" />
+    <Project Path="services/Basket/Basket.Application/Basket.Application.csproj" Id="b3168049-bae0-4468-aa07-cfddd45a143b" />
+    <Project Path="services/Basket/Basket.Core/Basket.Core.csproj" Id="31067bcc-06a4-43ff-b481-276afcd74478" />
+    <Project Path="services/Basket/Basket.Infrastructure/Basket.Infrastructure.csproj" Id="ca0f9178-3e7e-4620-ab51-b42f230b4716" />
+  </Folder>
+  <Folder Name="/services/catalog/">
+    <Project Path="services/catalog/Catalog.Api/Catalog.Api.csproj" />
+    <Project Path="services/catalog/Catalog.Application/Catalog.Application.csproj" />
+    <Project Path="services/catalog/Catalog.Core/Catalog.Core.csproj" />
+    <Project Path="services/catalog/Catalog.Infrastructure/Catalog.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/services/Discount/">
+    <Project Path="services/Discount/DIscount.Api/DIscount.Api.csproj" Id="6789f7a9-48dd-4233-89a2-a4c286418bf7" />
+    <Project Path="services/Discount/Discount.Application/Discount.Application.csproj" Id="341f2661-c220-40c5-abdb-a17042e8c56a" />
+    <Project Path="services/Discount/Discount.Core/Discount.Core.csproj" Id="e1a52b8b-2996-4e9c-9500-baea1b0ebb80" />
+    <Project Path="services/Discount/Discount.Infrastructure/Discount.Infrastructure.csproj" Id="aa8da227-7d15-4635-84c7-4efe2c1aebd6" />
+  </Folder>
+  <Folder Name="/services/Ordering/">
+    <Project Path="services/Ordering/Ordering.Api/Ordering.Api.csproj" Id="1d79e5a9-4fd1-42b2-b1dc-3de548231053" />
+    <Project Path="services/Ordering/Ordering.Application/Ordering.Application.csproj" Id="d8879328-b66d-40dc-82c0-fba3095bf68f" />
+    <Project Path="services/Ordering/Ordering.Core/Ordering.Core.csproj" Id="369373f8-131f-46aa-8791-b9e8667624ba" />
+    <Project Path="services/Ordering/Ordering.Infrastructure/Ordering.Infrastructure.csproj" Id="687e33d4-54a3-412f-9f9b-f750f9ce72f3" />
+  </Folder>
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
+</Solution>

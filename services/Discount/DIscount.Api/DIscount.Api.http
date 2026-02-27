@@ -1,0 +1,6 @@
+@DIscount.Api_HostAddress = http://localhost:5210
+
+GET {{DIscount.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
