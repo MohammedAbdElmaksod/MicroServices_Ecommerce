@@ -28,17 +28,26 @@ builder.Services.AddInfraService(builder.Configuration);
 builder.Services.AddAutoMapper(typeof(OrderMappingProfile));
 
 builder.Services.AddScoped<BasketOrderingConsumer>();
+builder.Services.AddScoped<BasketOrderingConsumerV2>();
 
 //configure Rabbitmq as consumer 
 builder.Services.AddMassTransit(config =>
 {
     config.AddConsumer<BasketOrderingConsumer>();
+    config.AddConsumer<BasketOrderingConsumerV2>();
+
     config.UsingRabbitMq((ctx, cfg) =>
     {
         cfg.Host(builder.Configuration["EventBusSettings:HostAddress"]);
         cfg.ReceiveEndpoint(EventBusConstant.BasketCheckoutQueue, c =>
         {
             c.ConfigureConsumer<BasketOrderingConsumer>(ctx);
+        });
+
+        // version 2 of the consumer
+        cfg.ReceiveEndpoint(EventBusConstant.BasketCheckoutQueueV2, c =>
+        {
+            c.ConfigureConsumer<BasketOrderingConsumerV2>(ctx);
         });
     });
 });

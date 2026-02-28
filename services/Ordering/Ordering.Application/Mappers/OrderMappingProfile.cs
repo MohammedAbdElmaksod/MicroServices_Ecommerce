@@ -14,5 +14,7 @@ public class OrderMappingProfile : Profile
         CreateMap<CheckoutOrderCommand, Order>().ReverseMap();
         CreateMap<UpdateOrderCommand, Order>().ReverseMap();
         CreateMap<CheckoutOrderCommand, BasketCheckoutEvent>().ReverseMap();
+        CreateMap<CheckoutOrderCommandV2, BasketCheckoutEventV2>().ReverseMap();
+        CreateMap<CheckoutOrderCommandV2, Order>().ReverseMap();
     }
 }
