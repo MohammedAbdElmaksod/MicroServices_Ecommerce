@@ -167,6 +167,22 @@ services:
       - "5601:5601"
 
 
+  ocelot.apigateway:
+    image: ${DOCKER_REGISTRY-}ocelotapigateway
+    build:
+      context: .
+      dockerfile: ApiGateway/Ocelot.APIGateway/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080
+    depends_on:
+      - catalog.api
+      - basket.api
+      - discount.api
+      - ordering.api
+    ports:
+      - "8010:8080" 
+
 volumes:
   catalogdata:
   portainer_data:
@@ -174,5 +190,6 @@ volumes:
   pgadmin_data:
   order_data:
   elasticsearch_data:
+
 
 
